@@ -1,1 +1,1 @@
-# interface-segmentation-mfp-Java
+# Interface Segmentation - Multi Function Printer (Java)
