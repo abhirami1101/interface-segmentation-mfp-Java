@@ -1,10 +1,9 @@
 package printer;
 
 /**
- * Class MultiFunctionPrinter to
- * implement the interface.
+ * Multifunction Printer Scanner that only implements printing and scanning.
  */
-public class MultiFunctionPrinter implements IPrinter, IFax, IScanner {
+public class MultiFunctionScannerPrinter implements IPrinter, IScanner {
     /**
      * to access the last action of the printer.
      */
@@ -14,21 +13,14 @@ public class MultiFunctionPrinter implements IPrinter, IFax, IScanner {
     public void print(final String doc) {
         // print logic
         this.lastAction = "printing " + doc;
-        System.out.println("Printing the doc....");
-    }
-
-    @Override
-    public void fax(final String doc) {
-        // fax logic
-        this.lastAction = "fax " + doc;
-        System.out.println("Faxing the doc...");
+        System.out.println("Multi Function Scanner-Printer printing the doc....");
     }
 
     @Override
     public void scan(final String doc) {
         // scan logic
         this.lastAction = "scanning " + doc;
-        System.out.println("Scanning the doc....");
+        System.out.println("Multi Function Scanner-Printer scanning the doc....");
     }
 
     public String getLastAction() {
