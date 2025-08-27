@@ -9,38 +9,22 @@ This project uses the example of multi-function printer to demonstrate ISP. A si
 
 So, role-based small interfaces like IPrinter, IScanner, IFax were defined for each function. A class can then based on the functionality implement the necessary interfaces.
 
+Key components
+
+`IFax` : Interface for the fax functionality
+
+`IScan` : Interface for the scan functionality
+
+`IPrinter` : Interface for the print functionality
+
+`MultiFunctionPrinter` : Supports printing, scanning, fax
+
+`BasicPrinter` : Supports only printing
+
+`MultiFunctionScannerPrinter` : Supports only printing and scanning
+
+`MultiFunctionFaxPrinter` : Supports only printing and fax
+
 # Class Diagram
-```
-  +---------------------------------+  +---------------------------------+   +------------------------------------+ 
-  |  IPrinter                       |  | IScanner                        |   | IFax                               | 
-  |                                 |  |                                 |   |                                    | 
-  |  void print(string doc){}       |  | void scan(string doc){}         |   | void fax(string doc) {}            | 
-  |                                 |  |                                 |   |                                    | 
-  |                                 |  |                                 |   |                                    | 
-  |                                 |  |                                 |   |                                    | 
-  +--------------^------------------+  +--------------^------------------+   +--------------^---------------------+ 
-                 |                                    |                                     |                       
-                 |                                    |                                     |                       
-                 |                                    |                                     |                       
-                 |   implements                       |     implements                      |   implements          
-                 |                                    |                                     |                       
-                 |                                    |                                     |                       
-+------------------------------------------------------------------------------------------------------------------+
-|                                                                                                                  |
-|                                                                                                                  |
-|                                                                                                                  |
-|                                                                                                                  |
-|                            Multifunction printer                                                                 |
-|                                                                                                                  |
-|                           + print(string doc)                                                                    |
-|                           + scan (string doc)                                                                    |
-|                           + fax(string doc)                                                                      |
-|                                                                                                                  |
-|                                                                                                                  |
-|                                                                                                                  |
-|                                                                                                                  |
-|                                                                                                                  |
-|                                                                                                                  |
-+------------------------------------------------------------------------------------------------------------------+
 
-
+![Class diagram showing the Interface Segregation Principle for printers](./assets/uml.jpg)
