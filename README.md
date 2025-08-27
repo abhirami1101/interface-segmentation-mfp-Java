@@ -30,7 +30,7 @@ So, role-based small interfaces like IPrinter, IScanner, IFax were defined for e
 |                                                                                                                  |
 |                                                                                                                  |
 |                                                                                                                  |
-|                            Multifunction printer+ scan (string doc                                               |
+|                            Multifunction printer                                               |
 |                                                                                                                  |
 |                           + print(string doc)                                                                    |
 |                           + scan (string doc)                                                                    |
